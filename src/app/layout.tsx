@@ -42,6 +42,8 @@ export default function RootLayout({
             "netflix",
             "twilight",
             "reddit",
+            "blackPink",
+            "cyberpunk"
           ]}
         >
           {children}

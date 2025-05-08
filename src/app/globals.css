@@ -205,6 +205,24 @@
   --logo-body: #8d82c4;
   --span-bg: linear-gradient(to right, #8d82c4, #f7b7a3, #7d9dbf);
 }
+.blackPink {
+  --primary: #ff69b4;
+  --secondary: #000000;
+  --background: #000000;
+  --background-secondary: #1a1a1a;
+  --button: #ff69b4;
+  --button-text: #000000;
+  --text-secondary: #f0f0f0;
+  --dropdown: #1a1a1a;
+  --dropdown-hover: #333333;
+  --button-secondary: #333333;
+  --selected: #ffb6c1;
+  --logo-shadow: #ff69b4;
+  --logo-body: #ff69b4;
+  --span-bg: linear-gradient(to right, #000000, #ff69b4, #ff1493);
+}
+
+
 
 @layer utilities {
   /* Background Colors */

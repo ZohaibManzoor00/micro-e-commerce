@@ -4,14 +4,23 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import NavbarSidebar from "./navbar-sidebar";
+import { useState } from "react";
+import { MenuIcon } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <nav className="h-20 flex border-b border-primary justify-between font-medium">
       <Link className="pl-6 flex items-center" href="/">
         <span className="text-5xl font-semibold">App</span>
       </Link>
+      <NavbarSidebar
+        onOpenChange={setIsSidebarOpen}
+        items={navbarItems}
+        open={isSidebarOpen}
+      />
 
       <div className="items-center gap-4 hidden lg:flex">
         {navbarItems.map((item) => (
@@ -38,6 +47,12 @@ export default function Navbar() {
           className="border-l border-t-0 border-b-0 border-r-0 border-secondary px-12 h-full rounded-none transition-colors text-xl"
         >
           <Link href="/sign-up">Start selling</Link>
+        </Button>
+      </div>
+
+      <div className="flex lg:hidden justify-center items-center">
+        <Button variant="ghost" className="size-12 hover:bg-transparent" onClick={() => setIsSidebarOpen(true)}>
+          <MenuIcon className="text-primary hover:text-blue-300"/>
         </Button>
       </div>
     </nav>
