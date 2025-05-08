@@ -1,17 +1,18 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { usePathname } from "next/navigation";
 import NavbarSidebar from "./navbar-sidebar";
-import { useState } from "react";
 import { MenuIcon } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  
+
   return (
     <nav className="h-20 flex border-b border-primary justify-between font-medium">
       <Link className="pl-6 flex items-center" href="/">
