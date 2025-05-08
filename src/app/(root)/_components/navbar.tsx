@@ -11,6 +11,7 @@ import { MenuIcon } from "lucide-react";
 export default function Navbar() {
   const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
   return (
     <nav className="h-20 flex border-b border-primary justify-between font-medium">
       <Link className="pl-6 flex items-center" href="/">
