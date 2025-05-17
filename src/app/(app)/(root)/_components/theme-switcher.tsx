@@ -1,11 +1,12 @@
 "use client";
-import { useTheme } from "next-themes";
+
 import { useEffect, useRef, useState } from "react";
+import { useTheme } from "next-themes";
 
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false); // New state to control dropdown visibility
-  const { setTheme, resolvedTheme, themes, theme } = useTheme();
+  const { setTheme, themes, theme } = useTheme();
   const ref = useRef(null);
   useEffect(() => setMounted(true), []);
 
