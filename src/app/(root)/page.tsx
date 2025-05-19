@@ -1,6 +1,9 @@
+import { db } from "@/db/db";
 import ThemeSwitch from "./_components/theme-switcher";
 
-export default function Home() {
+export default async function Home() {
+  const result = await db.execute('select 1');
+  console.log(result)
   return (
     <div className="min-h-screen flex flex-col mt-10">
       <div className="flex justify-end mr-5">
