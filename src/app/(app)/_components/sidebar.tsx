@@ -92,29 +92,28 @@ export default function AppSidebar() {
             <HomeIcon />
             <SidebarLabel>Home</SidebarLabel>
           </SidebarItem>
-          <SidebarItem href="/events">
+          <SidebarItem href="/projects">
             <Square2StackIcon />
-            <SidebarLabel>Events</SidebarLabel>
+            <SidebarLabel>Projects</SidebarLabel>
           </SidebarItem>
-          <SidebarItem href="/orders">
+          <SidebarItem href="/projects/tasks">
             <TicketIcon />
-            <SidebarLabel>Orders</SidebarLabel>
-          </SidebarItem>
-          <SidebarItem href="/settings">
-            <Cog6ToothIcon />
-            <SidebarLabel>Settings</SidebarLabel>
+            <SidebarLabel>Tasks</SidebarLabel>
           </SidebarItem>
           <SidebarItem href="/broadcasts">
             <MegaphoneIcon />
             <SidebarLabel>Broadcasts</SidebarLabel>
           </SidebarItem>
+          <SidebarItem href="/settings">
+            <Cog6ToothIcon />
+            <SidebarLabel>Settings</SidebarLabel>
+          </SidebarItem>
         </SidebarSection>
         <SidebarSection className="max-lg:hidden">
-          <SidebarHeading>Upcoming Events</SidebarHeading>
-          <SidebarItem href="/events/1">Bear Hug: Live in Concert</SidebarItem>
-          <SidebarItem href="/events/2">Viking People</SidebarItem>
-          <SidebarItem href="/events/3">Six Fingers — DJ Set</SidebarItem>
-          <SidebarItem href="/events/4">We All Look The Same</SidebarItem>
+          <SidebarHeading>Active Projects</SidebarHeading>
+          <SidebarItem href="/projects/1">TinyURL Clone</SidebarItem>
+          <SidebarItem href="/projects/2">AI Writing Assistant</SidebarItem>
+          <SidebarItem href="/projects/3">Habit Tracker App</SidebarItem>
         </SidebarSection>
         <SidebarSpacer />
         <SidebarSection>
