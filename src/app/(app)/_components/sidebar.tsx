@@ -3,7 +3,6 @@ import {
   SidebarBody,
   SidebarFooter,
   SidebarHeader,
-  SidebarHeading,
   SidebarItem,
   SidebarLabel,
   SidebarSection,
@@ -29,23 +28,20 @@ import {
   UserIcon,
 } from "@heroicons/react/16/solid";
 import {
-  Cog6ToothIcon,
-  HomeIcon,
   InboxIcon,
   MagnifyingGlassIcon,
-  MegaphoneIcon,
   QuestionMarkCircleIcon,
   SparklesIcon,
-  Square2StackIcon,
-  TicketIcon,
 } from "@heroicons/react/20/solid";
+import NavSideBarClient from "./nav-sidebar-client";
+import UserNavSideBarClient from "./user-nav-sidebar-client";
 
 export default function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
         <Dropdown>
-          <DropdownButton as={SidebarItem} className="lg:mb-2.5">
+          <DropdownButton as={SidebarItem} className="">
             <Avatar src="/tailwind-logo.svg" />
             <SidebarLabel>Your name here</SidebarLabel>
             <ChevronDownIcon />
@@ -75,7 +71,7 @@ export default function AppSidebar() {
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <SidebarSection className="max-lg:hidden">
+        {/* <SidebarSection className="max-lg:hidden">
           <SidebarItem href="/search">
             <MagnifyingGlassIcon />
             <SidebarLabel>Search</SidebarLabel>
@@ -84,37 +80,12 @@ export default function AppSidebar() {
             <InboxIcon />
             <SidebarLabel>Inbox</SidebarLabel>
           </SidebarItem>
-        </SidebarSection>
+        </SidebarSection> */}
       </SidebarHeader>
       <SidebarBody>
-        <SidebarSection>
-          <SidebarItem href="/">
-            <HomeIcon />
-            <SidebarLabel>Home</SidebarLabel>
-          </SidebarItem>
-          <SidebarItem href="/projects">
-            <Square2StackIcon />
-            <SidebarLabel>Projects</SidebarLabel>
-          </SidebarItem>
-          <SidebarItem href="/projects/tasks">
-            <TicketIcon />
-            <SidebarLabel>Tasks</SidebarLabel>
-          </SidebarItem>
-          <SidebarItem href="/broadcasts">
-            <MegaphoneIcon />
-            <SidebarLabel>Broadcasts</SidebarLabel>
-          </SidebarItem>
-          <SidebarItem href="/settings">
-            <Cog6ToothIcon />
-            <SidebarLabel>Settings</SidebarLabel>
-          </SidebarItem>
-        </SidebarSection>
-        <SidebarSection className="max-lg:hidden">
-          <SidebarHeading>Active Projects</SidebarHeading>
-          <SidebarItem href="/projects/1">TinyURL Clone</SidebarItem>
-          <SidebarItem href="/projects/2">AI Writing Assistant</SidebarItem>
-          <SidebarItem href="/projects/3">Habit Tracker App</SidebarItem>
-        </SidebarSection>
+        <NavSideBarClient />
+        <UserNavSideBarClient />
+
         <SidebarSpacer />
         <SidebarSection>
           <SidebarItem href="/support">

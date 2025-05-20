@@ -1,0 +1,16 @@
+export const badgeStatusColorMapper: Record<string, string> = {
+  "In Progress": "lime",
+  Completed: "blue",
+  Cancelled: "red",
+  Pending: "yellow",
+  "On Hold": "orange",
+  "Not Started": "zinc",
+  Launching: "indigo",
+  Beta: "violet",
+  Maintenance: "amber",
+  Archived: "zinc",
+  Failed: "rose",
+  Paused: "slate",
+  Reviewed: "emerald",
+  "Needs Review": "pink",
+};

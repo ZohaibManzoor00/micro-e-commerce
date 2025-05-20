@@ -34,6 +34,7 @@ const colors = {
   zinc: 'bg-zinc-600/10 text-zinc-700 group-data-hover:bg-zinc-600/20 dark:bg-white/5 dark:text-zinc-400 dark:group-data-hover:bg-white/10',
 }
 
+export type BadgeColor = keyof typeof colors
 type BadgeProps = { color?: keyof typeof colors }
 
 export function Badge({ color = 'zinc', className, ...props }: BadgeProps & React.ComponentPropsWithoutRef<'span'>) {

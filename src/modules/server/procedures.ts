@@ -9,7 +9,7 @@ export const userRouter = createTRPCRouter({
 });
 
 export const projectRouter = createTRPCRouter({
-  getAll: baseProcedure.query(async () => {
+  getAllProjects: baseProcedure.query(async () => {
     const projects = await db.select().from(projectsTable);
     return projects;
   }),

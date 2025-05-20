@@ -1,6 +1,6 @@
 import { SidebarLayout } from "@/components/sidebar-layout";
-import AppSidebar from "./_components/sidebar";
-import AppNavbar from "./_components/navbar";
+import AppSidebar from "../_components/sidebar";
+import AppNavbar from "../_components/navbar";
 
 interface LayoutProps {
   children: React.ReactNode;

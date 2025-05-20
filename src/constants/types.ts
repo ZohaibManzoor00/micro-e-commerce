@@ -1,0 +1,15 @@
+export type ProjectStatus =
+  | "Not Started"
+  | "In Progress"
+  | "Pending"
+  | "On Hold"
+  | "Paused"
+  | "Cancelled"
+  | "Failed"
+  | "Needs Review"
+  | "Reviewed"
+  | "Completed"
+  | "Launching"
+  | "Beta"
+  | "Maintenance"
+  | "Archived";
