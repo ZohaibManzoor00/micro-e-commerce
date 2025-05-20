@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
 import { ThemeProvider } from "./providers/theme-provider";
+import { ClerkProvider } from "@clerk/nextjs";
+import { TRPCReactProvider } from "@/trpc/client";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,30 +28,36 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+    <ClerkProvider>
+      <html
+        lang="en"
+        suppressHydrationWarning
+        className="bg-white lg:bg-zinc-100 dark:bg-zinc-900 dark:lg:bg-zinc-950"
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          themes={[
-            "light",
-            "dark",
-            "instagram",
-            "facebook",
-            "discord",
-            "netflix",
-            "twilight",
-            "reddit",
-            "blackPink",
-            "cyberpunk"
-          ]}
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            themes={[
+              "light",
+              "dark",
+              "instagram",
+              "facebook",
+              "discord",
+              "netflix",
+              "twilight",
+              "reddit",
+              "blackPink",
+              "cyberpunk",
+            ]}
+          >
+            <TRPCReactProvider>{children}</TRPCReactProvider>
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
